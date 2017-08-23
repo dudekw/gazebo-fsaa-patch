@@ -1512,7 +1512,7 @@ void Camera::CreateRenderTexture(const std::string &_textureName)
   */
 
   // use fsaa = 0 
-  fsaa = 0;
+  int fsaa = 0;
   // Create the render texture
   this->renderTexture = (Ogre::TextureManager::getSingleton().createManual(
       _textureName,
