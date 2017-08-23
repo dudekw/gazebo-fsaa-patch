@@ -59,7 +59,7 @@ using namespace rendering;
 
 
 unsigned int CameraPrivate::cameraCounter = 0;
-
+int fsaa = 0;
 //////////////////////////////////////////////////
 Camera::Camera(const std::string &_name, ScenePtr _scene,
                bool _autoRender)
@@ -1512,7 +1512,7 @@ void Camera::CreateRenderTexture(const std::string &_textureName)
   */
 
   // use fsaa = 0 
-  int fsaa = 0;
+  fsaa = 0;
   // Create the render texture
   this->renderTexture = (Ogre::TextureManager::getSingleton().createManual(
       _textureName,
